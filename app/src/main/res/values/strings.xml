@@ -1,0 +1,88 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">TSA Software Dev Assignment</string>
+    <string name="my_string" type="Danger Near Me" tools:ignore="ResourceCycle">Danger Near Me</string>
+    <string name="my_string_2" type="Future Prevalence" tools:ignore="ResourceCycle">Future Prevalence</string>
+    <string name="my_string_3" type="Recent(5 Years)" tools:ignore="ResourceCycle">Recent(5 Years)</string>
+    <string name="my_string_4" type="All Time" tools:ignore="ResourceCycle">All Time</string>
+    <string name="my_string_5" type="Questions" tools:ignore="ResourceCycle">Questions</string>
+    <string name="my_string_6" type="Time" tools:ignore="ResourceCycle">Time</string>
+    <string name="my_string_7" type="To" tools:ignore="ResourceCycle">To</string>
+    <string name="my_string_8" type="Submit" tools:ignore="ResourceCycle">Submit</string>
+    <string name="my_string_9" type="o" tools:ignore="ResourceCycle">o</string>
+    <string name="my_string_10" type="submit" tools:ignore="ResourceCycle">SUBMIT</string>
+    <string name="my_string_11" type="Nature Guard" tools:ignore="ResourceCycle">Nature Guard</string>
+    <string name="my_string_12" type="Select Date" tools:ignore="ResourceCycle">Jan 01 2025</string>
+    <string name="my_string_13" type="County" tools:ignore="ResourceCycle">County</string>
+
+    <string-array name="spinner_items">
+        <item>Alachua</item>
+        <item>Baker</item>
+        <item>Bay</item>
+        <item>Bradford</item>
+        <item>Brevard</item>
+        <item>Broward</item>
+        <item>Calhoun</item>
+        <item>Charlotte</item>
+        <item>Citrus</item>
+        <item>Clay</item>
+        <item>Collier</item>
+        <item>Columbia</item>
+        <item>DeSoto</item>
+        <item>Dixie</item>
+        <item>Duval</item>
+        <item>Escambia</item>
+        <item>Flagler</item>
+        <item>Franklin</item>
+        <item>Gadsden</item>
+        <item>Gilchrist</item>
+        <item>Glades</item>
+        <item>Gulf</item>
+        <item>Hamilton</item>
+        <item>Hardee</item>
+        <item>Hendry</item>
+        <item>Hernando</item>
+        <item>Highlands</item>
+        <item>Hillsborough</item>
+        <item>Holmes</item>
+        <item>Indian River</item>
+        <item>Jackson</item>
+        <item>Jefferson</item>
+        <item>Lafayette</item>
+        <item>Lake</item>
+        <item>Lee</item>
+        <item>Leon</item>
+        <item>Levy</item>
+        <item>Liberty</item>
+        <item>Madison</item>
+        <item>Manatee</item>
+        <item>Marion</item>
+        <item>Martin</item>
+        <item>Miami-Dade</item>
+        <item>Monroe</item>
+        <item>Nassau</item>
+        <item>Okaloosa</item>
+        <item>Okeechobee</item>
+        <item>Orange</item>
+        <item>Osceola</item>
+        <item>Palm Beach</item>
+        <item>Pasco</item>
+        <item>Pinellas</item>
+        <item>Polk</item>
+        <item>Putnam</item>
+        <item>Santa Rosa</item>
+        <item>Sarasota</item>
+        <item>Seminole</item>
+        <item>St. Johns</item>
+        <item>St. Lucie</item>
+        <item>Sumter</item>
+        <item>Suwannee</item>
+        <item>Taylor</item>
+        <item>Union</item>
+        <item>Volusia</item>
+        <item>Wakulla</item>
+        <item>Walton</item>
+        <item>Washington</item>
+    </string-array>
+
+
+</resources>
