@@ -33,6 +33,7 @@ public class DangerNearMe extends AppCompatActivity {
 
         Spinner spinner;
 
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -45,11 +46,12 @@ public class DangerNearMe extends AppCompatActivity {
             });
 
             initDatePicker();
+            initDatePicker2();
             dateButton = findViewById(R.id.datePickerButton);
             dateButton.setText(getTodayDate());
 
             dateButton2 = findViewById(R.id.datePickerButton2);
-            dateButton2.setText(getTodayDate());
+            dateButton2.setText(getTodayDate2());
 
 
             spinner =findViewById(R.id.spinner);
@@ -98,31 +100,33 @@ public class DangerNearMe extends AppCompatActivity {
     }
     private String getMonthFormat(int month)
     {
-        if(month == 1)
+        if (month == 1) {
             return "JAN";
-        if(month == 2)
+        } else if (month == 2) {
             return "FEB";
-        if(month == 3)
+        } else if (month == 3) {
             return "MAR";
-        if(month == 4)
+        } else if (month == 4) {
             return "APR";
-        if(month == 5)
+        } else if (month == 5) {
             return "MAY";
-        if(month == 6)
+        } else if (month == 6) {
             return "JUN";
-        if(month == 7)
+        } else if (month == 7) {
             return "JUL";
-        if(month == 8)
+        } else if (month == 8) {
             return "AUG";
-        if(month == 9)
+        } else if (month == 9) {
             return "SEP";
-        if(month == 10)
+        }else if (month == 10) {
             return "OCT";
-        if(month == 11)
+        }else if (month == 11) {
             return "NOV";
-        if(month == 12)
+        } else if (month == 12) {
             return "DEC";
-        return "JAN";
+        } else{
+            return "JAN";
+        }
     }
 
 
@@ -148,7 +152,7 @@ public class DangerNearMe extends AppCompatActivity {
         int month = cal.get(Calendar.MONTH);
         month = month + 1;
         int day = cal.get(Calendar.DAY_OF_MONTH);
-        return makeDateString(day, month, year);
+        return makeDateString2(day, month, year);
     }
 
     private void initDatePicker2()
@@ -159,7 +163,7 @@ public class DangerNearMe extends AppCompatActivity {
             public void onDateSet(DatePicker datePicker2, int year, int month, int day)
             {
                 month = month + 1;
-                String date = makeDateString(day, month, year);
+                String date = makeDateString2(day, month, year);
                 dateButton2.setText(date);
                 dateButton2.setText(date);
             }
@@ -176,7 +180,7 @@ public class DangerNearMe extends AppCompatActivity {
 
     private String makeDateString2(int day, int month, int year)
     {
-        return getMonthFormat(month) + " " + day + " " + year;
+        return getMonthFormat2(month) + " " + day + " " + year;
     }
     private String getMonthFormat2(int month)
     {
