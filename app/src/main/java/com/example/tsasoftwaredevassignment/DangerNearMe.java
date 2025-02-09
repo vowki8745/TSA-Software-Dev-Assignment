@@ -167,9 +167,12 @@ public class DangerNearMe extends AppCompatActivity {
         Intent a = new Intent(this, Dates.class);
         String startDate;
         String endDate;
+        Button start = findViewById(R.id.datePickerButton);
+        Button end = findViewById(R.id.datePickerButton2);
+        startDate = start.getText().toString();
+        endDate = end.getText().toString();
+        @SuppressLint("ResourceType")
         String county = (String) getText(R.id.spinner);
-        startDate = (String) getText(R.id.datePickerButton);
-        endDate = (String) getText(R.id.datePickerButton2);
         a.putExtra("startDate", startDate);
         a.putExtra("endDate", endDate);
         a.putExtra("county", county);

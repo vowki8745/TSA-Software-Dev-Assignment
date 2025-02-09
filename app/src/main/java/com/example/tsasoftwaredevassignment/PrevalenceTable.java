@@ -1,8 +1,10 @@
 package com.example.tsasoftwaredevassignment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,5 +30,10 @@ public class PrevalenceTable extends AppCompatActivity {
         } else {
             Log.e("MainActivity", "View with ID 'main' not found in the layout.");
         }
+        String county = getIntent().getStringExtra("county");
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        TextView countyOut = findViewById(R.id.countyOut);
+        countyOut.setText(county);
+
     }
 }

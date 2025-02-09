@@ -7,4 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".PrevalenceTable">
 
+    <TextView
+        android:id="@+id/countyOut"
+        android:layout_width="243dp"
+        android:layout_height="151dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>
