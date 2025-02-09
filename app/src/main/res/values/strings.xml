@@ -84,5 +84,75 @@
         <item>Washington</item>
     </string-array>
 
+    <string-array name="spinner2_items">
+        <item>Alachua</item>
+        <item>Baker</item>
+        <item>Bay</item>
+        <item>Bradford</item>
+        <item>Brevard</item>
+        <item>Broward</item>
+        <item>Calhoun</item>
+        <item>Charlotte</item>
+        <item>Citrus</item>
+        <item>Clay</item>
+        <item>Collier</item>
+        <item>Columbia</item>
+        <item>DeSoto</item>
+        <item>Dixie</item>
+        <item>Duval</item>
+        <item>Escambia</item>
+        <item>Flagler</item>
+        <item>Franklin</item>
+        <item>Gadsden</item>
+        <item>Gilchrist</item>
+        <item>Glades</item>
+        <item>Gulf</item>
+        <item>Hamilton</item>
+        <item>Hardee</item>
+        <item>Hendry</item>
+        <item>Hernando</item>
+        <item>Highlands</item>
+        <item>Hillsborough</item>
+        <item>Holmes</item>
+        <item>Indian River</item>
+        <item>Jackson</item>
+        <item>Jefferson</item>
+        <item>Lafayette</item>
+        <item>Lake</item>
+        <item>Lee</item>
+        <item>Leon</item>
+        <item>Levy</item>
+        <item>Liberty</item>
+        <item>Madison</item>
+        <item>Manatee</item>
+        <item>Marion</item>
+        <item>Martin</item>
+        <item>Miami-Dade</item>
+        <item>Monroe</item>
+        <item>Nassau</item>
+        <item>Okaloosa</item>
+        <item>Okeechobee</item>
+        <item>Orange</item>
+        <item>Osceola</item>
+        <item>Palm Beach</item>
+        <item>Pasco</item>
+        <item>Pinellas</item>
+        <item>Polk</item>
+        <item>Putnam</item>
+        <item>Santa Rosa</item>
+        <item>Sarasota</item>
+        <item>Seminole</item>
+        <item>St. Johns</item>
+        <item>St. Lucie</item>
+        <item>Sumter</item>
+        <item>Suwannee</item>
+        <item>Taylor</item>
+        <item>Union</item>
+        <item>Volusia</item>
+        <item>Wakulla</item>
+        <item>Walton</item>
+        <item>Washington</item>
+    </string-array>
+
 
 </resources>

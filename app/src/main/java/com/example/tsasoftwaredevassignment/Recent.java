@@ -16,7 +16,7 @@ public class Recent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // EdgeToEdge.enable(this); // Check for deprecation and alternatives
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_recent);
 
         View mainView = findViewById(R.id.main);
         if (mainView != null) {
