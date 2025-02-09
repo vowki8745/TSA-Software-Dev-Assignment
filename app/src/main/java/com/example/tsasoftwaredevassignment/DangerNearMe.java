@@ -3,6 +3,7 @@ package com.example.tsasoftwaredevassignment;
 import static android.app.AlertDialog.THEME_HOLO_DARK;
 import static android.content.DialogInterface.BUTTON_NEUTRAL;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -140,11 +141,38 @@ public class DangerNearMe extends AppCompatActivity {
     public void launchRecent(View v){
         //launchDangerNearME
         Intent r = new Intent(this, Dates.class);
+        String startDate = new String("2019-01");
+        String endDate = new String("2024-12");
+        @SuppressLint("ResourceType") String county = (String) getText(R.id.spinner);
+        r.putExtra("startDate", startDate);
+        r.putExtra("endDate", endDate);
+        r.putExtra("county", county);
         startActivity(r);
     }
     public void launchAllTime(View v) {
         //launchDangerNearME
         Intent a = new Intent(this, Dates.class);
+        @SuppressLint("ResourceType") String county = (String) getText(R.id.spinner);
+        String startDate = new String("1900-01");
+        String endDate = new String("2024-12");
+        a.putExtra("county",county);
+        a.putExtra("startDate", startDate);
+        a.putExtra("endDate", endDate);
+        startActivity(a);
+    }
+
+    @SuppressLint("ResourceType")
+    public void launchCustom(View v) {
+        //launchDangerNearME
+        Intent a = new Intent(this, Dates.class);
+        String startDate;
+        String endDate;
+        String county = (String) getText(R.id.spinner);
+        startDate = (String) getText(R.id.datePickerButton);
+        endDate = (String) getText(R.id.datePickerButton2);
+        a.putExtra("startDate", startDate);
+        a.putExtra("endDate", endDate);
+        a.putExtra("county", county);
         startActivity(a);
     }
     private String getTodayDate2()

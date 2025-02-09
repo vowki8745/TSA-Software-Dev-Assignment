@@ -1,8 +1,6 @@
 package com.example.tsasoftwaredevassignment;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,27 +8,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Dates extends AppCompatActivity {
+public class tableSpecies extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_dates);
+        setContentView(R.layout.activity_table_species);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        String startDate = getIntent().getStringExtra("startDate");
-        String endDate = getIntent().getStringExtra("endDate");
-
-        TextView startDateTextView = findViewById(R.id.startDate1);
-        TextView endDateTextView = findViewById(R.id.endDate1);
-
-        startDateTextView.setText(startDate);
-        endDateTextView.setText(endDate);
-
     }
 }
