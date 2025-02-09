@@ -2,6 +2,7 @@ package com.example.tsasoftwaredevassignment;
 
 import static com.example.tsasoftwaredevassignment.R.id.spinner2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -56,5 +57,10 @@ public class FuturePrevalence extends AppCompatActivity implements AdapterView.O
     public void onNothingSelected(AdapterView<?> adapterView)
     {
 
+    }
+    public void launchTable(View v) {
+        //launch FuturePrevalenceTable
+        Intent i = new Intent(this, PrevalenceTable.class);
+        startActivity(i);
     }
 }

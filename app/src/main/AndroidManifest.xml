@@ -13,6 +13,9 @@
         android:theme="@style/Theme.TSASoftwareDevAssignment"
         tools:targetApi="31">
         <activity
+            android:name=".PrevalenceTable"
+            android:exported="false" />
+        <activity
             android:name=".Dates"
             android:exported="false" />
         <activity
