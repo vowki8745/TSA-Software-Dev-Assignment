@@ -1,22 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PrevalenceTable">
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/countyOut"
-        android:layout_width="243dp"
-        android:layout_height="151dp"
-        android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- TextView to display the county -->
+        <TextView
+            android:id="@+id/countyOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="County: "
+            android:textSize="24sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- TableLayout to display your data in rows.
+             Rows can be added programmatically in your Activity. -->
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_marginBottom="16dp">
+
+            <!-- Optionally, include a header row here -->
+            <!--
+            <TableRow>
+                <TextView
+                    android:text="Rank"
+                    android:textStyle="bold"
+                    android:padding="8dp" />
+                <TextView
+                    android:text="Species"
+                    android:textStyle="bold"
+                    android:padding="8dp" />
+                <TextView
+                    android:text="Count"
+                    android:textStyle="bold"
+                    android:padding="8dp" />
+            </TableRow>
+            -->
+
+        </TableLayout>
+
+        <!-- TextView to display the future most prevalent species -->
+        <TextView
+            android:id="@+id/futureSpeciesOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Future Most Prevalent Species: "
+            android:textSize="24sp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
