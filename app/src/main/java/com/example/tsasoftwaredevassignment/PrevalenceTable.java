@@ -25,17 +25,17 @@ public class PrevalenceTable extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prevalence_table);
 
-        // Get county name from intent
+
         String county = getIntent().getStringExtra("county");
 
-        // Set county name in the UI
+
         TextView countyOut = findViewById(R.id.countyOut);
         countyOut.setText("County: " + county);
 
-        // Reference the TableLayout
+
         TableLayout tableLayout = findViewById(R.id.tableLayout);
 
-        // Populate the table if county is provided
+
         if (county != null) {
             populateTable(tableLayout, county);
         } else {
@@ -47,7 +47,7 @@ public class PrevalenceTable extends AppCompatActivity {
         Map<String, Integer> speciesCount = new HashMap<>();
 
         try {
-            // Open CSV file from assets
+
             InputStream inputStream = getAssets().open("final_predictions.csv");
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
@@ -59,7 +59,7 @@ public class PrevalenceTable extends AppCompatActivity {
                     continue;
                 }
 
-                // Split CSV columns
+
                 String[] columns = line.split(",");
                 if (columns.length < 6) continue;
 
@@ -67,7 +67,7 @@ public class PrevalenceTable extends AppCompatActivity {
                 String species = columns[7].trim();  // Common Name
                 int count = Integer.parseInt(columns[4].trim()); // Predicted Count
 
-                // Filter data by county
+
                 if (rowCounty.equalsIgnoreCase(county)) {
                     speciesCount.put(species, speciesCount.getOrDefault(species, 0) + count);
                 }
@@ -77,11 +77,10 @@ public class PrevalenceTable extends AppCompatActivity {
             Log.e("PrevalenceTable", "Error reading CSV file", e);
         }
 
-        // Sort species by predicted count (highest first)
         TreeMap<String, Integer> sortedSpecies = new TreeMap<>((a, b) -> speciesCount.get(b).compareTo(speciesCount.get(a)));
         sortedSpecies.putAll(speciesCount);
 
-        // Populate the table dynamically
+
         int rank = 1;
         for (Map.Entry<String, Integer> entry : sortedSpecies.entrySet()) {
             TableRow row = new TableRow(this);
@@ -101,7 +100,7 @@ public class PrevalenceTable extends AppCompatActivity {
             rank++;
         }
 
-        // Set future most prevalent species in TextView
+
         if (!sortedSpecies.isEmpty()) {
             String futureSpecies = sortedSpecies.firstKey();
             TextView futureSpeciesOut = findViewById(R.id.futureSpeciesOut);
