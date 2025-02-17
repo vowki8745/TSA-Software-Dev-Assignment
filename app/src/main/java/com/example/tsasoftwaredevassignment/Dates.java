@@ -50,7 +50,7 @@ public class Dates extends AppCompatActivity {
         // checking if county filter is applied
         boolean filterByCounty = countyFilter != null
                 && !countyFilter.trim().isEmpty()
-                && !countyFilter.equalsIgnoreCase("false");
+                && !countyFilter.trim().equalsIgnoreCase("false");
 
         // log the countyFilter value to check if it's correctly passed
         Log.d("Intent Data", "Start Date: " + startDate);
