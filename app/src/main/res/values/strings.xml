@@ -13,6 +13,10 @@
     <string name="my_string_11" type="Nature Guard" tools:ignore="ResourceCycle">Nature Guard</string>
     <string name="my_string_12" type="Select Date" tools:ignore="ResourceCycle">Jan 01 2025</string>
     <string name="my_string_13" type="County" tools:ignore="ResourceCycle">County</string>
+    <string name="my_string_14" type="Custom Dates" tools:ignore="ResourceCycle">Custom Dates</string>
+    <string name="my_string_15" type="Button" tools:ignore="ResourceCycle">Button</string>
+
+
 
     <string-array name="spinner_items">
         <item>Alachua</item>
