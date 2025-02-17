@@ -56,7 +56,7 @@ public class DangerNearMe extends AppCompatActivity {
 
 
             spinner =findViewById(R.id.spinner);
-
+            spinner.setPrompt("Insert County");
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                     R.array.spinner_items, android.R.layout.simple_spinner_item);
 

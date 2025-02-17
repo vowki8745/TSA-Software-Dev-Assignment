@@ -39,7 +39,7 @@ public class FuturePrevalence extends AppCompatActivity implements AdapterView.O
             Log.e("MainActivity", "View with ID 'main' not found in the layout.");
         }
         spinner2 = findViewById(R.id.spinner2);
-
+        spinner2.setPrompt("Select County");
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.spinner_items, android.R.layout.simple_spinner_item);
 
