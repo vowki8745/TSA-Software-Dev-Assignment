@@ -2,6 +2,7 @@ package com.example.tsasoftwaredevassignment;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -26,10 +27,9 @@ public class Dates extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // calling superclass constructor
         super.onCreate(savedInstanceState);
 
-        // setting the content view to activity_dates layout
+        // set the content view to activity_dates layout
         setContentView(R.layout.activity_dates);
 
         // getting start date from intent
@@ -52,91 +52,99 @@ public class Dates extends AppCompatActivity {
                 && !countyFilter.trim().isEmpty()
                 && !countyFilter.equalsIgnoreCase("false");
 
-        // finding the title textview by id
+        // log the countyFilter value to check if it's correctly passed
+        Log.d("Intent Data", "Start Date: " + startDate);
+        Log.d("Intent Data", "End Date: " + endDate);
+        Log.d("Intent Data", "County Filter: " + countyFilter);
+
+        // find the title textview by id
         TextView titleText = findViewById(R.id.titleText);
 
-        // setting the title text based on filter
+        // set the title text based on filter
         if (filterByCounty) {
             titleText.setText("Most prevalent species in " + countyFilter);
         } else {
             titleText.setText("Most prevalent species");
         }
 
-        // creating a hashmap to store species count
+        // create a hashmap to store species count
         Map<String, Integer> speciesCount = new HashMap<>();
 
         try {
-            // opening csv file from assets
+            // open csv file from assets
             InputStream is = getAssets().open("srcdata.csv");
 
-            // creating buffered reader to read file
+            // create buffered reader to read file
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
             String line;
 
             // reading file line by line
             while ((line = reader.readLine()) != null) {
 
-                // splitting line by commas
+                // split line by commas
                 String[] tokens = line.split(",");
 
-                // skipping lines with insufficient columns
+                // skip lines with insufficient columns
                 if (tokens.length < 5) continue;
 
-                // extracting common name
+                // extract common name
                 String comName = tokens[1].trim();
 
-                // extracting county name
+                // extract county name
                 String county = tokens[2].trim();
 
-                // extracting month
+                // extract month
                 String month = tokens[3].trim();
 
                 int count;
                 try {
-                    // parsing count to integer
+                    // parse count to integer
                     count = Integer.parseInt(tokens[4].trim());
                 } catch (NumberFormatException e) {
-                    // skipping invalid count values
+                    // skip invalid count values
                     continue;
                 }
 
-                // checking if county matches filter
-                if (filterByCounty && !county.equalsIgnoreCase(countyFilter)) {
+                // log the extracted county to verify if it's being parsed correctly
+                Log.d("CSV Parsing", "Parsed county: " + county);
+
+                // check if county matches filter and apply it
+                if (filterByCounty && !county.equalsIgnoreCase(countyFilter.trim())) {
                     continue;
                 }
 
-                // checking if date range is valid
+                // check if date range is valid
                 if (startDate != null && endDate != null) {
-                    // checking if month is within range
+                    // check if month is within range
                     if (month.compareTo(startDate) < 0 || month.compareTo(endDate) > 0) {
                         continue;
                     }
                 }
 
-                // adding count to species map
+                // add count to species map
                 speciesCount.put(comName, speciesCount.getOrDefault(comName, 0) + count);
             }
 
-            // closing reader
+            // close reader
             reader.close();
         } catch (IOException e) {
-            // printing error stack trace if file read fails
+            // print error stack trace if file read fails
             e.printStackTrace();
         }
 
-        // creating list from hashmap entries
+        // create list from hashmap entries
         List<Map.Entry<String, Integer>> sortedSpecies = new ArrayList<>(speciesCount.entrySet());
 
         // sorting species by count in descending order
         Collections.sort(sortedSpecies, (e1, e2) -> e2.getValue().compareTo(e1.getValue()));
 
-        // finding table layout by id
+        // find table layout by id
         TableLayout tableLayout = findViewById(R.id.tableLayout);
 
-        // creating a new table row for headers
+        // create a new table row for headers
         TableRow headerRow = new TableRow(this);
 
-        // creating textview for rank header
+        // create textview for rank header
         TextView rankHeader = new TextView(this);
 
         // setting text for rank header
@@ -148,7 +156,7 @@ public class Dates extends AppCompatActivity {
         // setting padding
         rankHeader.setPadding(8, 8, 8, 8);
 
-        // creating textview for species name header
+        // create textview for species name header
         TextView speciesHeader = new TextView(this);
 
         // setting text for species name header
@@ -173,10 +181,10 @@ public class Dates extends AppCompatActivity {
         // looping through sorted species
         for (Map.Entry<String, Integer> entry : sortedSpecies) {
 
-            // creating new table row
+            // create new table row
             TableRow row = new TableRow(this);
 
-            // creating textview for rank column
+            // create textview for rank column
             TextView rankText = new TextView(this);
 
             // setting rank text
@@ -185,7 +193,7 @@ public class Dates extends AppCompatActivity {
             // setting padding
             rankText.setPadding(8, 8, 8, 8);
 
-            // creating textview for species column
+            // create textview for species column
             TextView speciesText = new TextView(this);
 
             // setting species name
