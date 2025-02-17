@@ -116,14 +116,14 @@ public class DangerNearMe extends AppCompatActivity {
         Intent r = new Intent(this, Dates.class);
         r.putExtra("startDate", "2019-01");
         r.putExtra("endDate", "2024-12");
-        r.putExtra("county", (String) getText(R.id.spinner));
+        r.putExtra("county", spinner.getSelectedItem().toString());
         startActivity(r);
     }
 
     // launch all-time date search activity
     public void launchAllTime(View v) {
         Intent a = new Intent(this, Dates.class);
-        a.putExtra("county", (String) getText(R.id.spinner));
+        a.putExtra("county", spinner.getSelectedItem().toString());
         a.putExtra("startDate", "1900-01");
         a.putExtra("endDate", "2024-12");
         startActivity(a);
@@ -136,7 +136,7 @@ public class DangerNearMe extends AppCompatActivity {
         Button end = findViewById(R.id.datePickerButton2);
         a.putExtra("startDate", start.getText().toString());
         a.putExtra("endDate", end.getText().toString());
-        a.putExtra("county", (String) getText(R.id.spinner));
+        a.putExtra("county", spinner.getSelectedItem().toString());
         startActivity(a);
     }
 
