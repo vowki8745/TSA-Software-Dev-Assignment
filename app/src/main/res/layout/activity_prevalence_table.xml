@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#9b9b9b"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -17,9 +18,9 @@
             android:id="@+id/countyOut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:text="County: "
-            android:textSize="24sp"
-            android:layout_marginBottom="16dp" />
+            android:textSize="24sp" />
 
         <!-- TableLayout to display your data in rows.
              Rows can be added programmatically in your Activity. -->
@@ -27,8 +28,8 @@
             android:id="@+id/tableLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stretchColumns="*"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="16dp"
+            android:stretchColumns="*">
 
             <!-- Optionally, include a header row here -->
             <!--
