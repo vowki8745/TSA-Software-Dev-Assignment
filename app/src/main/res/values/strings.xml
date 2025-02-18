@@ -15,6 +15,11 @@
     <string name="my_string_13" type="County" tools:ignore="ResourceCycle">County</string>
     <string name="my_string_14" type="Custom Dates" tools:ignore="ResourceCycle">Custom Dates</string>
     <string name="my_string_15" type="Button" tools:ignore="ResourceCycle">Button</string>
+    <string name="my_string_16" type="Between" tools:ignore="ResourceCycle">Between</string>
+    <string name="my_string_17" type="Custom Dates" tools:ignore="ResourceCycle">Custom Dates</string>
+    <string name="my_string_18" type="Insert County" tools:ignore="ResourceCycle">Insert County</string>
+
+
 
 
 

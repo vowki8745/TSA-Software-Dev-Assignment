@@ -17,24 +17,23 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566"
-        />
+        app:layout_constraintVertical_bias="0.499" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="370dp"
         android:layout_height="59dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Insert Your County"
+        android:text="@string/my_string_18"
         android:textAlignment="center"
-        android:textColor="#6BF607"
-        android:textSize="35sp"
+        android:textColor="@color/black"
+        android:textSize="45sp"
         app:layout_constraintBottom_toTopOf="@+id/spinner2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942" />
+        app:layout_constraintVertical_bias="0.925" />
 
     <TextView
         android:id="@+id/textView4"
@@ -47,65 +46,61 @@
         android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.882" />
+        app:layout_constraintVertical_bias="0.265" />
 
     <Button
         android:id="@+id/button5"
         style="?android:buttonStyle"
         android:layout_width="374dp"
         android:layout_height="48dp"
-        android:background="#7BB028"
+        android:background="@color/green"
         android:onClick="launchTable"
         android:text="@string/my_string_8"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
+        app:layout_constraintVertical_bias="0.613" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/greenery" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="339dp"
+        android:layout_height="458dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:srcCompat="@drawable/greenery" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="536dp"
-        android:layout_marginEnd="128dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bush" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="548dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bush" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="376dp"
-        android:layout_height="240dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="560dp"
-        android:rotation="180"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/bush" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="376dp"
-        android:layout_height="240dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginBottom="564dp"
-        android:rotation="180"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/bush" />
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2"
+        app:srcCompat="@drawable/greenery" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
